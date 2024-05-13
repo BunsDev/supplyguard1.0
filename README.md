@@ -138,4 +138,4 @@ module.exports = {
 - **Mobile and Desktop Expansion**: Plans to extend the functionality of SupplyGuard to mobile and desktop platforms, broadening its accessibility.
 - **Enhancing AI Capabilities**: Further develop AI functionalities to automate more aspects of supply chain management, such as predictive analytics for supply and demand.
 
-SupplyGuard is not just a technological innovation; it is a strategic redefinition of how supply chain interactions can be streamlined and secured through decentralized technology. This platform represents a pivotal advancement in making the supply chain industry more transparent, efficient, and user-friendly for all stakeholders involved. .
+SupplyGuard is not just a technological innovation; it is a strategic redefinition of how supply chain interactions can be streamlined and secured through decentralized technology. This platform represents a pivotal advancement in making the supply chain industry more transparent, efficient, and user-friendly for all stakeholders involved.
