@@ -1,0 +1,152 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/albertmends/Documents/SupplyTrack/ciseco-nextjs-ecommerce/contracts/Batch.sol": {
+      "lastModificationDate": 1715321832035,
+      "contentHash": "21a3f46d1ad91699a62431eb3b1a7899",
+      "sourceName": "contracts/Batch.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.8.3"
+      ],
+      "artifacts": [
+        "Batch"
+      ]
+    },
+    "/Users/albertmends/Documents/SupplyTrack/ciseco-nextjs-ecommerce/contracts/SupplyGuard.sol": {
+      "lastModificationDate": 1715323187580,
+      "contentHash": "1bc82c27e0fd6b80d7d8c20949703878",
+      "sourceName": "contracts/SupplyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol",
+        "./Batch.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "SupplyGuard"
+      ]
+    },
+    "/Users/albertmends/Documents/SupplyTrack/ciseco-nextjs-ecommerce/node_modules/@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol": {
+      "lastModificationDate": 1715154968454,
+      "contentHash": "29c520cd24ad9a3f2c9cf285fee25f05",
+      "sourceName": "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AggregatorV3Interface"
+      ]
+    },
+    "/Users/albertmends/Documents/SupplyTrack/ciseco-nextjs-ecommerce/contracts/SupplGuardApprove.sol": {
+      "lastModificationDate": 1714724779040,
+      "contentHash": "9ce962dbdac2db1b39a83c4409d18172",
+      "sourceName": "contracts/SupplGuardApprove.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.6"
+      ],
+      "artifacts": [
+        "SupplyChain"
+      ]
+    }
+  }
+}
