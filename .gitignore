@@ -19,7 +19,7 @@ secrete.txt
 # production
 /build
 
-# misc
+# miscss
 .DS_Store
 *.pem
 
