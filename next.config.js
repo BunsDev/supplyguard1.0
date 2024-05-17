@@ -3,6 +3,7 @@ const nextConfig = {
     typedRoutes: true,
     optimizePackageImports: ["my-lib"],
   },
+
   images: {
     remotePatterns: [
       {
