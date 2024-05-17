@@ -133,6 +133,8 @@ module.exports = {
 - **Pioneering Decentralized Supply Chain Management**: SupplyGuard is at the forefront of integrating blockchain technology into supply chain management, setting a new standard for transparency and efficiency.
 - **Robust and Scalable Technology**: Successfully developed a system that is not only secure and reliable but also scalable to meet the needs of any size enterprise.
 
+<!-- git remote add origin git@github.com-mendsalbert:mendsalbert/supplyguard1.0.git  -->
+
 ### What's Next for SupplyGuard 🔮
 
 - **Mobile and Desktop Expansion**: Plans to extend the functionality of SupplyGuard to mobile and desktop platforms, broadening its accessibility.
