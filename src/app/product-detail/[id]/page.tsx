@@ -40,14 +40,11 @@ const ProductDetailPage = ({ params }: { params: { id: number } }) => {
     fetchProduct(params.id);
   }, [dispatch]);
 
-  // const { status, image, supplier, name, price, id } = PRODUCTS[params?.id - 1];
-
   const [variantActive, setVariantActive] = useState(0);
   const [qualitySelected, setQualitySelected] = useState(1);
   const [isOpenModalViewAllReviews, setIsOpenModalViewAllReviews] =
     useState(false);
 
-  //
   const notifyAddTocart = () => {
     toast.custom(
       (t) => (
