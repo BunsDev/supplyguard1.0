@@ -62,8 +62,6 @@ const ProductCardArt: FC<any> = ({ className = "", data, art }) => {
   const router = useRouter();
 
   const mintNFTHandler = async () => {
-    // const idt = toast.loading("Getting your Art Ready...");
-
     let res = await mintNFT(id.toString(), "0.003");
     // toast.update(idt, {
     //   render: "NFT Minted Succefully",

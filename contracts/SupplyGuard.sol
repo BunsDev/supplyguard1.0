@@ -27,8 +27,8 @@ contract SupplyGuard {
 
     // Initialize Chainlink Price Feed and Batch Precompile in the constructor
     constructor() {
-        priceFeed = AggregatorV3Interface(0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e); // ETH/USD on Goerli Testnet
-        batchContract = Batch(0x0000000000000000000000000000000000000808); // Batch Precompile address on Moonbeam/Moonbase Alpha
+        priceFeed = AggregatorV3Interface(0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e); 
+        batchContract = Batch(0x0000000000000000000000000000000000000808); 
     }
 
     // Add a new NFT in USD
