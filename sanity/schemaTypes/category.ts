@@ -18,6 +18,5 @@ export default defineType({
       validation: (Rule) =>
         Rule.max(200).warning("Shorter descriptions are usually better."),
     }),
-    // Add more fields here if you need to
   ],
 });
