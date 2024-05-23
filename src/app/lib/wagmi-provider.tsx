@@ -6,22 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { State, WagmiProvider } from "wagmi";
 import { config, projectId } from "./config";
 
-const LiskSepolia = {
-  chainId: 4202,
-  name: "Lisk Sepolia Testnet",
-  currency: "ETH",
-  explorerUrl: "https://sepolia-blockscout.lisk.com",
-  rpcUrl: "https://rpc.sepolia-api.lisk.com",
-} as any;
-
-const BitTorrent = {
-  chainId: 1029,
-  name: "BitTorrent Chain Donau",
-  currency: "BTTC",
-  explorerUrl: "https://testscan.bt.io",
-  rpcUrl: "https://pre-rpc.bt.io/",
-} as any;
-
 const zkEVMCardonaTestnet = {
   chainId: 2442,
   name: "Polygon zkEVM Cardona Testnet",
