@@ -15,31 +15,31 @@ const metadata = {
   icons: ["https://avatars.githubusercontent.com/u/37784886"],
 };
 
-const zkEVMCardonaTestnet = {
-  id: 2442,
-  name: "Polygon zkEVM Cardona Testnet",
-  network: "Polygon zkEVM Cardona Testnet",
+const Filecoin = {
+  id: 314159,
+  name: "Filecoin - Calibration testnet",
+  network: "Filecoin - Calibration testnet",
   nativeCurrency: {
     decimals: 18,
-    name: "Polygon zkEVM Cardona Testnet",
-    symbol: "ETH",
+    name: "Filecoin - Calibration testnet",
+    symbol: "tFIL",
   },
   rpcUrls: {
     default: {
-      http: ["https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public"],
+      http: ["https://filecoin-calibration.chainup.net/rpc/v1"],
     },
   },
   blockExplorers: {
     default: {
       name: "Apothem Explorer",
-      url: "https://cardona-zkevm.polygonscan.com",
+      url: "https://calibration.filscan.io",
     },
   },
   testnet: true,
 };
 
 export const config = defaultWagmiConfig({
-  chains: [zkEVMCardonaTestnet],
+  chains: [Filecoin],
   projectId,
   metadata,
   ssr: true,

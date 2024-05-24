@@ -6,18 +6,18 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { State, WagmiProvider } from "wagmi";
 import { config, projectId } from "./config";
 
-const zkEVMCardonaTestnet = {
-  chainId: 2442,
-  name: "Polygon zkEVM Cardona Testnet",
-  currency: "ETH",
-  explorerUrl: "https://cardona-zkevm.polygonscan.com",
-  rpcUrl: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public",
+const Filecoin = {
+  chainId: 314159,
+  name: "Filecoin - Calibration testnet",
+  currency: "tFIL",
+  explorerUrl: "https://calibration.filscan.io",
+  rpcUrl: "https://filecoin-calibration.chainup.net/rpc/v1",
 } as any;
 
 createWeb3Modal({
   wagmiConfig: config,
   projectId,
-  defaultChain: zkEVMCardonaTestnet,
+  defaultChain: Filecoin,
   enableAnalytics: true, // Optional
   themeMode: "light",
 });

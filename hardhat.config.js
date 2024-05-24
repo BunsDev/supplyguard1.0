@@ -30,6 +30,10 @@ module.exports = {
       url: "https://polygon-mumbai.g.alchemy.com/v2/2bGIFu-iEnl9RvAOTe1ddZI2gBnuYQGS",
       accounts: [privateKey],
     },
+    filecoin: {
+      url: "https://filecoin-calibration.chainup.net/rpc/v1",
+      accounts: [privateKey],
+    },
     kovan: {
       url: "https://kovan.infura.io/v3/745fcbe1f649402c9063fa946fdbb84c",
       accounts: [privateKey],
