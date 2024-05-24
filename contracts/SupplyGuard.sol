@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.6;
 import "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
-import "./Batch.sol";
+import './Batch.sol';
 
 contract SupplyGuard {
     struct NFT {
@@ -10,7 +10,7 @@ contract SupplyGuard {
         string description;
         string imageUrl;
         string source;
-        uint256 priceUSD; // USD price
+        uint256 priceUSD; 
         bool isMinted;
     }
 
