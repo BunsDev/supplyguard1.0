@@ -31,6 +31,7 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    disableStaticImages: true,
   },
   typescript: {
     ignoreBuildErrors: true,
