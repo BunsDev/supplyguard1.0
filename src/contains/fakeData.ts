@@ -37,7 +37,6 @@ import product22 from "@/images/products/22.png";
 import product23 from "@/images/products/23.png";
 import product24 from "@/images/products/24.png";
 
-//
 export const productImgs = [
   product1,
   product2,
