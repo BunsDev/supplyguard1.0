@@ -33,7 +33,6 @@ const nextConfig = {
     ],
     disableStaticImages: true,
   },
-
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -43,30 +42,6 @@ const nextConfig = {
   },
 
   ignoreBuildErrors: true,
-  webpackConfig: {
-    module: {
-      rules: [
-        {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          loader: "babel-loader",
-        },
-        {
-          test: /\.css$/,
-          loader: "style-loader!css-loader?modules",
-        },
-        {
-          test: /\.(jpg|png|svg)$/,
-          use: {
-            loader: "url-loader",
-            options: {
-              limit: 25000,
-            },
-          },
-        },
-      ],
-    },
-  },
 };
 
 module.exports = nextConfig;
