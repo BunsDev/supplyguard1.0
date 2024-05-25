@@ -1,7 +1,6 @@
 require("@nomicfoundation/hardhat-toolbox");
 const fs = require("fs");
 const privateKey = fs.readFileSync("secrete.txt").toString();
-/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   defaultNetwork: "sepolia",
   networks: {
