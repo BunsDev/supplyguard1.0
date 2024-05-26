@@ -6,11 +6,11 @@
 <h1 align="center">SupplyGuard</h1>
 
 <p align="center">
-    <a href="https://www.youtube.com/watch?v=OpL5Q7Zc7qk" title="">🖥️ Video</a>
-    .
-    <a href="https://github.com/mendsalbert/supplyguard" title="">📂 Repo</a>
+    <a href="https://www.youtube.com/watch?v=OpL5Q7Zc7qk" title="Video">🖥️ Video</a>
     ·
-    <a href="https://github.com/mendsalbert/supplyguard" title="🐛Report Bug/🎊Request Feature">🚀 Got Issue</a>
+    <a href="https://github.com/mendsalbert/supplyguard" title="Repo">📂 Repo</a>
+    ·
+    <a href="https://github.com/mendsalbert/supplyguard/issues" title="Report Bug / Request Feature">🚀 Got Issue</a>
 </p>
 <a href="" title="Project Initiator">
     <img src="https://i.imghippo.com/files/9hGC61714753154.png" width="100%" alt="Project Initiator"/>
@@ -29,6 +29,8 @@ SupplyGuard introduces a transformative approach to managing supply chains by le
 - **User-Friendly Interface**: Built with Next.js and React, SupplyGuard offers a seamless and intuitive user interface that simplifies complex supply chain processes into user-friendly workflows.
 - **Real-Time Tracking and Verification**: Incorporates QR codes and blockchain verification methods to provide real-time tracking of goods and authentication of transactions, enhancing trust and security.
 - **AI-Enhanced Operations**: Features AI-generated arts and collectibles within the supply chain, adding value through unique digital assets that can be tracked and traded securely on the platform.
+- **Chainlink Integration**: Uses Chainlink price feeds for accurate and reliable data.
+- **MonoBean for Batch Transactions**: Implements MonoBean to handle batch transactions efficiently.
 
 Through these features, SupplyGuard ensures:
 
@@ -44,46 +46,44 @@ SupplyGuard is crafted using cutting-edge technology tailored for decentralized 
 - **Decentralized Data Architecture**: Integrates with IPFS through Web3.storage to ensure all supply chain data is stored securely and permanently without reliance on centralized data centers.
 - **Advanced Frontend Technology**: Utilizes the latest in web development technology (Next.js, React) to deliver a responsive and dynamic user experience.
 - **Integration of AI**: Leverages artificial intelligence to create and manage unique digital assets within the supply chain, enhancing the value and interaction within the platform.
+- **Deployment on zkEVMCardonaTestnet**: Deployed on Polygon zkEVM Cardona Testnet for testing and validation.
 
-### Prerequisite
+### Prerequisites
 
-- [Nodejs](https://nodejs.org/en// "Node") Installed
-
-- [Git](https://git-scm.com/ "Git OFficial") Installed
-
-- [npm](https://www.npmjs.com/ "npm ") Installed
-
-- [Hardhat](https://hardhat.org/ "Hardhat ") Installed
+- [Node.js](https://nodejs.org/en/ "Node.js") Installed
+- [Git](https://git-scm.com/ "Git") Installed
+- [npm](https://www.npmjs.com/ "npm") Installed
+- [Hardhat](https://hardhat.org/ "Hardhat") Installed
 
 ### Installation Steps
 
 1. Clone the repository
 
-```Bash
+```bash
 git clone https://github.com/mendsalbert/supplyguard
 ```
 
 2. Change the working directory
 
-```Bash
+```bash
 cd supplyguard
 ```
 
 3. Start the local Hardhat node
 
-```Bash
+```bash
 npx hardhat node
 ```
 
 4. With the network running, deploy the contracts to the local network in a separate terminal window
 
-```Bash
+```bash
 npx hardhat run scripts/deploy.js --network BitTorrent
 ```
 
 5. Start the app
 
-```Bash
+```bash
 npm run start
 ```
 
@@ -91,35 +91,36 @@ npm run start
 
 ### Configuration
 
-The chain ID should be a number eg 1029. If you have a localhost rpc set up, you may need to overwrite it.
+The chain ID should be a number, e.g., 1029. If you have a localhost RPC set up, you may need to overwrite it.
 
-To deploy to a test or main networks, update the configurations located in hardhat.config.js to use a private key and, optionally, deploy to a private RPC like Infura.
+To deploy to test or main networks, update the configurations located in `hardhat.config.js` to use a private key and, optionally, deploy to a private RPC like Infura.
 
-```Bash
-require('@nomiclabs/hardhat-waffle');
-const privateKey = 'xx';
-const projectId = 'xx';
+```javascript
+require("@nomiclabs/hardhat-waffle");
+const fs = require("fs");
+const { ethers } = require("ethers");
+
+// Replace with your actual seed phrase
+const seedPhrase = "your seed phrase here";
+const wallet = ethers.Wallet.fromMnemonic(seedPhrase);
+const privateKey = wallet.privateKey;
 
 module.exports = {
-  defaultNetwork: 'hardhat',
+  defaultNetwork: "hardhat",
   networks: {
     hardhat: {
       chainId: 1029,
     },
-    "your-testnet": {
-      url: 'test-net-rpc-url',
+
+    zkEVMCardonaTestnet: {
+      url: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public",
       accounts: [privateKey],
     },
   },
-  solidity: {
-    version: '0.8.4',
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
-      },
-    },
-  },
+  solidity: "0.8.24",
+  allowUnlimitedContractSize: true,
+  throwOnTransactionFailures: true,
+  throwOnCallFailures: true,
 };
 ```
 
@@ -132,8 +133,6 @@ module.exports = {
 
 - **Pioneering Decentralized Supply Chain Management**: SupplyGuard is at the forefront of integrating blockchain technology into supply chain management, setting a new standard for transparency and efficiency.
 - **Robust and Scalable Technology**: Successfully developed a system that is not only secure and reliable but also scalable to meet the needs of any size enterprise.
-
-<!-- git remote add origin git@github.com-mendsalbert:mendsalbert/supplyguard1.0.git  -->
 
 ### What's Next for SupplyGuard 🔮
 
