@@ -7,7 +7,7 @@ export const contract = async () => {
   if (ethereum) {
     const signer = provider.getSigner();
     const contractReader = new ethers.Contract(
-      "0xFe3AE74fB3C2273F2f0060b0E3e0A7531c3c427A",
+      "0x500881F4c34594576A07a90007b755CEa8aE0497",
       SupplyGuard.abi,
       signer
     );
