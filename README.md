@@ -100,7 +100,6 @@ require("@nomiclabs/hardhat-waffle");
 const fs = require("fs");
 const { ethers } = require("ethers");
 
-// Replace with your actual seed phrase
 const seedPhrase = "your seed phrase here";
 const wallet = ethers.Wallet.fromMnemonic(seedPhrase);
 const privateKey = wallet.privateKey;
