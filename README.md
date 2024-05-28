@@ -98,7 +98,6 @@ To deploy to test or main networks, update the configurations located in `hardha
 ```javascript
 require("@nomiclabs/hardhat-waffle");
 const fs = require("fs");
-const { ethers } = require("ethers");
 const privateKey = wallet.privateKey;
 
 module.exports = {
