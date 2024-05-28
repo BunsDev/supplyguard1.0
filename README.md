@@ -99,18 +99,11 @@ To deploy to test or main networks, update the configurations located in `hardha
 require("@nomiclabs/hardhat-waffle");
 const fs = require("fs");
 const { ethers } = require("ethers");
-
-const seedPhrase = "your seed phrase here";
-const wallet = ethers.Wallet.fromMnemonic(seedPhrase);
 const privateKey = wallet.privateKey;
 
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
-    hardhat: {
-      chainId: 1029,
-    },
-
     zkEVMCardonaTestnet: {
       url: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public",
       accounts: [privateKey],
