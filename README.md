@@ -5,13 +5,6 @@
 </p>
 <h1 align="center">SupplyGuard</h1>
 
-<p align="center">
-    <a href="https://www.youtube.com/watch?v=OpL5Q7Zc7qk" title="Video">🖥️ Video</a>
-    ·
-    <a href="https://github.com/mendsalbert/supplyguard" title="Repo">📂 Repo</a>
-    ·
-    <a href="https://github.com/mendsalbert/supplyguard/issues" title="Report Bug / Request Feature">🚀 Got Issue</a>
-</p>
 <a href="" title="Project Initiator">
     <img src="https://i.imghippo.com/files/9hGC61714753154.png" width="100%" alt="Project Initiator"/>
 </a>
