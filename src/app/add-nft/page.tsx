@@ -61,6 +61,42 @@ const CheckoutPage = () => {
     }
   };
 
+  const handleImagesChange = async (files: any) => {
+    const file = files[0]; // Only handling one image
+    try {
+      const form = new FormData();
+      form.append("file", file);
+      form.append("pinataMetadata", JSON.stringify({ name: file.name }));
+      form.append("pinataOptions", JSON.stringify({ cidVersion: 1 }));
+
+      const options = {
+        method: "POST",
+        headers: {
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJkMWJjNzRiNy00YWUzLTQ0ZmUtYjU1NS0wNGVkOTRlMTY1NzAiLCJlbWFpbCI6Im1lbmRzYWxiZXJ0QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImlkIjoiRlJBMSIsImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxfV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2UsInN0YXR1cyI6IkFDVElWRSJ9LCJhdXRoZW50aWNhdGlvblR5cGUiOiJzY29wZWRLZXkiLCJzY29wZWRLZXlLZXkiOiJiOWI4NzA2ZTQ4MDMwYzE1MzRhZCIsInNjb3BlZEtleVNlY3JldCI6ImM5N2M4ODgyZDFiZDg1MDY5ZmU3M2Q0YmRkODhmMWZiMzFiYzU0YTQ2NjJkMGQ1Njk5Mjg4NzAxYjUxZThkMjAiLCJpYXQiOjE3MTYwNzQ3Mzd9.uL0vggNCb0Y0Zz42yQiZ4fBwG3kDAlGotZ2TgsMvyLc",
+        },
+        body: form,
+      };
+
+      const response = await fetch(
+        "https://api.pinata.cloud/pinning/pinFileToIPFS",
+        options
+      );
+
+      const responseData = await response.json();
+      if (responseData.error) {
+        throw new Error(responseData.error);
+      }
+      const fileUrl = `https://gateway.pinata.cloud/ipfs/${responseData.IpfsHash}`;
+      console.log(fileUrl);
+
+      // Set the image URL in the form data
+      setNFTData((prev) => ({ ...prev, imageUrl: fileUrl }));
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
+
   const handleSubmit = async () => {
     const receipt = await addNFT(
       NFTData.title,
@@ -109,6 +145,11 @@ const CheckoutPage = () => {
                 name="imageUrl"
                 value={NFTData.imageUrl}
                 onChange={handleInputChange}
+              />
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => handleImagesChange(e.target.files)}
               />
             </div>
 
