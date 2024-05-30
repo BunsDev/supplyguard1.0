@@ -46,7 +46,7 @@ SupplyGuard is crafted using cutting-edge technology tailored for decentralized 
 - **Decentralized Data Architecture**: Integrates with IPFS through Web3.storage to ensure all supply chain data is stored securely and permanently without reliance on centralized data centers.
 - **Advanced Frontend Technology**: Utilizes the latest in web development technology (Next.js, React) to deliver a responsive and dynamic user experience.
 - **Integration of AI**: Leverages artificial intelligence to create and manage unique digital assets within the supply chain, enhancing the value and interaction within the platform.
-- **Deployment on zkEVMCardonaTestnet**: Deployed on Polygon zkEVM Cardona Testnet for testing and validation.
+- **Deployment on Filecoin Calibration testnet**: Deployed on Filecoin Calibration testnet for testing and validation.
 
 ### Prerequisites
 
@@ -105,7 +105,7 @@ module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     zkEVMCardonaTestnet: {
-      url: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public",
+      url: "https://filecoin-calibration.chainup.net/rpc/v1",
       accounts: [privateKey],
     },
   },
