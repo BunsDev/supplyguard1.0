@@ -10,7 +10,7 @@
     ·
     <a href="https://github.com/mendsalbert/supplyguard" title="Repo">📂 Repo</a>
     ·
-    <a href="https://github.com/mendsalbert/supplyguard/issues" title="Report Bug / Request Feature">🚀 Got Issue</a>
+    <a href="https://github.com/mendsalbert/supplyguard1.0/issues" title="Report Bug / Request Feature">🚀 Got Issue</a>
 </p>
 <a href="" title="Project Initiator">
     <img src="https://i.imghippo.com/files/9hGC61714753154.png" width="100%" alt="Project Initiator"/>
@@ -46,7 +46,6 @@ SupplyGuard is crafted using cutting-edge technology tailored for decentralized 
 - **Decentralized Data Architecture**: Integrates with IPFS through Web3.storage to ensure all supply chain data is stored securely and permanently without reliance on centralized data centers.
 - **Advanced Frontend Technology**: Utilizes the latest in web development technology (Next.js, React) to deliver a responsive and dynamic user experience.
 - **Integration of AI**: Leverages artificial intelligence to create and manage unique digital assets within the supply chain, enhancing the value and interaction within the platform.
-- **Deployment on Filecoin Calibration testnet**: Deployed on Filecoin Calibration testnet for testing and validation.
 
 ### Prerequisites
 
@@ -104,8 +103,8 @@ const privateKey = wallet.privateKey;
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
-    FilecoinCalibrationTestnet: {
-      url: "https://filecoin-calibration.chainup.net/rpc/v1",
+    testnet: {
+      url: "",
       accounts: [privateKey],
     },
   },
