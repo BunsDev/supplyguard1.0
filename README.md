@@ -104,7 +104,7 @@ const privateKey = wallet.privateKey;
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
-    zkEVMCardonaTestnet: {
+    FilecoinCalibrationTestnet: {
       url: "https://filecoin-calibration.chainup.net/rpc/v1",
       accounts: [privateKey],
     },
