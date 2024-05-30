@@ -5,6 +5,13 @@
 </p>
 <h1 align="center">SupplyGuard</h1>
 
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=OpL5Q7Zc7qk" title="Video">🖥️ Video</a>
+    ·
+    <a href="https://github.com/mendsalbert/supplyguard1.0" title="Repo">📂 Repo</a>
+    ·
+    <a href="https://github.com/mendsalbert/supplyguard1.0/issues" title="Report Bug / Request Feature">🚀 Got Issue</a>
+</p>
 <a href="" title="Project Initiator">
     <img src="https://i.imghippo.com/files/9hGC61714753154.png" width="100%" alt="Project Initiator"/>
 </a>
@@ -39,7 +46,6 @@ SupplyGuard is crafted using cutting-edge technology tailored for decentralized 
 - **Decentralized Data Architecture**: Integrates with IPFS through Web3.storage to ensure all supply chain data is stored securely and permanently without reliance on centralized data centers.
 - **Advanced Frontend Technology**: Utilizes the latest in web development technology (Next.js, React) to deliver a responsive and dynamic user experience.
 - **Integration of AI**: Leverages artificial intelligence to create and manage unique digital assets within the supply chain, enhancing the value and interaction within the platform.
-- **Deployment on zkEVMCardonaTestnet**: Deployed on Polygon zkEVM Cardona Testnet for testing and validation.
 
 ### Prerequisites
 
@@ -91,13 +97,14 @@ To deploy to test or main networks, update the configurations located in `hardha
 ```javascript
 require("@nomiclabs/hardhat-waffle");
 const fs = require("fs");
+const { ethers } = require("ethers");
 const privateKey = wallet.privateKey;
 
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
-    zkEVMCardonaTestnet: {
-      url: "https://polygon-zkevm-cardona.blockpi.network/v1/rpc/public",
+    testnet: {
+      url: "",
       accounts: [privateKey],
     },
   },
