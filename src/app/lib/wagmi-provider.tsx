@@ -19,7 +19,7 @@ createWeb3Modal({
   wagmiConfig: config,
   projectId,
   defaultChain: Filecoin,
-  enableAnalytics: true, // Optional
+  enableAnalytics: true,
   themeMode: "light",
 });
 
