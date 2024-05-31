@@ -103,7 +103,7 @@ module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     testnet: {
-      url: "",
+      url: "url",
       accounts: [privateKey],
     },
   },
