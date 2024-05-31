@@ -45,7 +45,6 @@ SupplyGuard is crafted using cutting-edge technology tailored for decentralized 
 - **Blockchain Backend**: Developed using Solidity, smart contracts on Ethereum provide a robust and secure backend for transaction management.
 - **Decentralized Data Architecture**: Integrates with IPFS through Web3.storage to ensure all supply chain data is stored securely and permanently without reliance on centralized data centers.
 - **Advanced Frontend Technology**: Utilizes the latest in web development technology (Next.js, React) to deliver a responsive and dynamic user experience.
-- **Integration of AI**: Leverages artificial intelligence to create and manage unique digital assets within the supply chain, enhancing the value and interaction within the platform.
 
 ### Prerequisites
 
