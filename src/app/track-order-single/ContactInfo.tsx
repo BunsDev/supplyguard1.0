@@ -89,7 +89,7 @@ const ContactInfo: FC<Props> = ({
                 {responsibilitiesMap[data?.role?.responsibilities] ||
                   "Unknown Role"}
               </span>
-              {data.approved ? (
+              {!data.approved ? (
                 <ShieldCheckIcon className="h-7 w-7 pb-1 ml-3 text-green-500" />
               ) : (
                 <ClockIcon className="h-7 w-7 pb-1 ml-3" />
@@ -99,7 +99,7 @@ const ContactInfo: FC<Props> = ({
               <span className="">{data?.role?.fullname}</span>
               <span className="ml-3 tracking-tighter">
                 {truncateEthAddress(data?.role?.ethaddress || "")}
-                <span>{String(data?.approved)}</span>
+                {/* <span>{String(data?.approved)}</span> */}
               </span>
             </div>
           </div>

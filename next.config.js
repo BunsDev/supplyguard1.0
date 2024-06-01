@@ -3,7 +3,6 @@ const nextConfig = {
     typedRoutes: true,
     optimizePackageImports: ["my-lib"],
   },
-
   images: {
     remotePatterns: [
       {
@@ -31,22 +30,18 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
-    disableStaticImages: true,
   },
   typescript: {
     ignoreBuildErrors: true,
   },
-
   eslint: {
     ignoreDuringBuilds: true,
   },
-
-  ignoreBuildErrors: true,
-  reactStrictMode: true,
-  images: {
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
+  // reactStrictMode: true,
+  // images: {
+  //   dangerouslyAllowSVG: true,
+  //   contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  // },
 };
 
 module.exports = nextConfig;
