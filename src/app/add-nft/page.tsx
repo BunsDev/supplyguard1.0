@@ -62,7 +62,7 @@ const CheckoutPage = () => {
   };
 
   const handleImagesChange = async (files: any) => {
-    const file = files[0]; // Only handling one image
+    const file = files[0];
     try {
       const form = new FormData();
       form.append("file", file);
